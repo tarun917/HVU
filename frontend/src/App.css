@@ -1,4 +1,4 @@
-#root {
+/*#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -40,3 +40,91 @@
 .read-the-docs {
   color: #888;
 }
+*/
+/*
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #18181b;
+  color: #fff;
+}
+/*
+.logo a {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-buttons .login-btn,
+.auth-buttons .signup-btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-buttons .signup-btn {
+  background-color: #4f46e5; 
+  border: none;
+  margin-left: 0.5rem;
+}
+
+
+*/
+/*hero section ke liye*/
+/*
+.hero {
+  background: url('/path/to/bg-image.jpg') center/cover no-repeat;
+  min-height: 60vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.cta-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/*footer*/
+/*
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1f1f23;
+  color: #ccc;
+}
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
