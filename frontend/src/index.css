@@ -1,73 +1,87 @@
-/*
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes neon-glow-purple {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(128, 0, 255, 0.7), 0 0 20px rgba(128, 0, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8), 0 0 30px rgba(255, 0, 255, 0.6);
+  }
+}
+
+@keyframes neon-glow-green {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.7), 0 0 20px rgba(0, 255, 128, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
+  }
+}
+
+@keyframes neon-glow-orange {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 128, 0, 0.7), 0 0 20px rgba(255, 128, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.6);
+  }
+}
+
+@keyframes neon-glow-pink {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 0, 128, 0.7), 0 0 20px rgba(255, 0, 128, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 102, 204, 0.8), 0 0 30px rgba(255, 102, 204, 0.6);
+  }
+}
+
+@keyframes neon-glow-blue {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 128, 255, 0.7), 0 0 20px rgba(0, 128, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(102, 204, 255, 0.8), 0 0 30px rgba(102, 204, 255, 0.6);
+  }
+}
+
+@keyframes neon-glow-lime {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(128, 255, 0, 0.7), 0 0 20px rgba(128, 255, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(204, 255, 102, 0.8), 0 0 30px rgba(204, 255, 102, 0.6);
+  }
+}
+
+/* Add more keyframes for each card if needed */
+/* Particle Styles */
+.particle {
+  position: absolute;
+  background: radial-gradient(circle, rgb(255, 0, 0), rgb(255, 0, 0));
+  border-radius: 20%;
+  pointer-events: none;
+  animation: particle-move 1.5s ease-out forwards, particle-fade 0.5s ease-out forwards;
+}
+
+/* Movement Animation */
+@keyframes particle-move {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+  }
+  100% {
+    transform: translate(calc(var(--x-offset, 0px) * 0.5px), calc(var(--y-offset, 0px) * 1px)) scale(0.5);
+  }
+}
+
+/* Fade Animation */
+@keyframes particle-fade {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}

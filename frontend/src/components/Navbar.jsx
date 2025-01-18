@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between bg-gradient-to-r from-indigo-900 via-purple-800 to-black-800 text-white px-6 py-4">
+    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between bg-black text-white px-6 py-4">
       {/* Logo */}
       <div className="text-xl font-bold">
         <Link to="/">HVU Logo</Link>
