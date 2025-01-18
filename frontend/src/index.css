@@ -60,7 +60,7 @@
 /* Particle Styles */
 .particle {
   position: absolute;
-  background: radial-gradient(circle, rgb(255, 0, 0), rgb(255, 0, 0));
+  background: radial-gradient(circle, rgb(0, 255, 0), rgb(0, 255, 0));
   border-radius: 20%;
   pointer-events: none;
   animation: particle-move 1.5s ease-out forwards, particle-fade 0.5s ease-out forwards;
