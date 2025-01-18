@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 CORS_ALLOW_ALL_ORIGINS = True
+SITE_ID = 1
 
 # Application definition
 
@@ -37,9 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework.authtoken',
+    'django.contrib.sites',
     'corsheaders',
     'rest_framework',
     'core',
+    'accounts',
     
 ]
 
@@ -73,6 +77,12 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 
 WSGI_APPLICATION = 'hvu_backend.wsgi.application'
 
