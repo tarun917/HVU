@@ -14,7 +14,7 @@ function Home() {
   return (
     <div>
       <Hero />
-      <section className="py-10 bg-gray-900 text-white">
+      <section className="py-10 bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white">
         <h2 className="text-3xl font-bold text-center mb-8">Explore Our Virtual University</h2>
         <div className="grid gap-6 px-4 sm:px-6 md:px-10 lg:px-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {/* Card 1 */}

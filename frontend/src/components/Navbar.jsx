@@ -1,12 +1,24 @@
 // src/components/Navbar.jsx
 import { Link } from "react-router-dom";
+import gifLogo from "../assets/hvu_logo.gif";
 
 function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between bg-black text-white px-6 py-4">
-      {/* Logo */}
-      <div className="text-xl font-bold">
-        <Link to="/">HVU Logo</Link>
+    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white px-4 py-2 shadow-lg">
+       {/* Logo */}
+      <div className="logo-container flex items-center">
+        <Link to="/">
+          <picture>
+            {/* Primary Animated Logo */}
+            <source srcSet={gifLogo} type="image/gif" />
+            {/* Fallback Static Logo */}
+            <img
+              src="/assets/hvu_logo_fallback.png"
+              alt="HVU Logo"
+              className="logo-animation w-32 h-32"
+            />
+          </picture>
+        </Link>
       </div>
 
       {/* Nav Links (Desktop) */}
