@@ -14,8 +14,11 @@ function Home() {
   return (
     <div>
       <Hero />
-      <section className="py-10 bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white">
-        <h2 className="text-3xl font-bold text-center mb-8">Explore Our Virtual University</h2>
+      <section className="py-10 bg-black text-white">
+        <h2 className="text-3xl font-bold text-center mb-8 elative text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-green-500 to-orange-500 glow-text">
+          <span className="relative text-5xl text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-red-700 to-yellow-400 animate-pulse drop-shadow-lg">{' '}
+          Explore
+          </span>{' '} Our Virtual University</h2>
         <div className="grid gap-6 px-4 sm:px-6 md:px-10 lg:px-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {/* Card 1 */}
           <div className="p-6 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:animate-[neon-glow-purple_1.5s_infinite] transition duration-300 transform hover:scale-105 hover:rotate-1">
