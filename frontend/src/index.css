@@ -124,8 +124,9 @@
 /* For logo container */
 /* Ensure the container adjusts properly */
 .logo-container {
-  width: 100px; /* Increased size */
-  height: 100px;
+  width: 120px; /* Increased size */
+  height: 120px;
+  padding-top: 3px;
 }
 
 /* Update the animation/image size */

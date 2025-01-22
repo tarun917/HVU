@@ -1,21 +1,24 @@
-import { useState, useContext } from 'react'
-import { AuthContext } from '../context/AuthContext'
+import { useState, useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const { login } = useContext(AuthContext)
+  const { login } = useContext(AuthContext);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    const success = await login(username, password)
-    if(success){
-      alert('Login successful!')
-      // Navigate to dashboard or home
+    e.preventDefault();
+    const isSuccess = await login(username, password);
+    if (!isSuccess) {
+      setError('Invalid username or password.');
     } else {
-      alert('Invalid credentials')
+      setError('');
+      navigate('/dashboard'); // Redirect to dashboard
     }
-  }
+  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
@@ -42,8 +45,9 @@ function Login() {
           Login
         </button>
       </form>
+      {error && <p className="text-red-500 mt-2">{error}</p>}
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

@@ -4,7 +4,7 @@ import gifLogo from "../assets/hvu_logo.gif";
 
 function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white px-4 py-2 shadow-lg">
+    <nav className="fixed top-0 left-0 w-full h-20 z-50 flex items-center justify-between bg-black text-white px-4 py-2 shadow-lg">
        {/* Logo */}
       <div className="logo-container flex items-center">
         <Link to="/">
@@ -15,7 +15,7 @@ function Navbar() {
             <img
               src="/assets/hvu_logo_fallback.png"
               alt="HVU Logo"
-              className="logo-animation w-32 h-32"
+              className="logo-animation"
             />
           </picture>
         </Link>
