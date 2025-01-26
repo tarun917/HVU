@@ -14,6 +14,7 @@ export const theme = {
     animation: {
       "spin-slow": "spin 10s linear infinite",
     },
+    
   },
 };
 export const plugins = [];

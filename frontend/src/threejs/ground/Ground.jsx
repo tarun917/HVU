@@ -10,7 +10,7 @@ export default function Ground() {
       {/* Large plane for the ground */}
       <planeGeometry args={[2000, 2000]} /> {/* Use `planeGeometry` for a thin ground */}
       <meshStandardMaterial
-        color="green"
+        color="pink"
         roughness={0.8} // Adds texture realism
         metalness={0.1} // Slight metallic look
       />
