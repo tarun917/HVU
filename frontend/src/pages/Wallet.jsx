@@ -73,7 +73,7 @@ export default function Wallet() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-900 via-purple-900 to-black text-white px-6 py-10">
+    <div className="ml-[12.5%] min-h-screen bg-gradient-to-r from-gray-900 via-purple-900 to-black text-white px-6 py-10">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center mb-6 neon-text">
           Your Virtual Wallet

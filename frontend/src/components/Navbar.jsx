@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import { Link } from "react-router-dom";
-import gifLogo from "../assets/hvu_logo.gif";
+import webmLogo from "../assets/milkyway_logo.webm";
 
 function Navbar() {
   return (
@@ -8,16 +8,16 @@ function Navbar() {
        {/* Logo */}
       <div className="logo-container flex items-center">
         <Link to="/">
-          <picture>
+          <video>
             {/* Primary Animated Logo */}
-            <source srcSet={gifLogo} type="image/gif" />
+            <source srcSet={webmLogo} type="video/webm" />
             {/* Fallback Static Logo */}
             <img
               src="/assets/hvu_logo_fallback.png"
               alt="HVU Logo"
               className="logo-animation"
             />
-          </picture>
+          </video>
         </Link>
       </div>
 
@@ -37,14 +37,14 @@ function Navbar() {
       {/* Auth Buttons (Desktop) */}
       <div className="hidden md:flex items-center space-x-4">
         <Link to="/login">
-        <button className="relative inline-block px-6 py-3 font-bold text-white group relative inline-block px-6 py-3 font-bold text-white group border border-black rounded-lg">
+        <button className="relative inline-block px-6 py-3 font-bold text-white group group border border-black rounded-lg">
           <span className="absolute inset-0 w-full h-full transition duration-300 ease-in-out transform bg-gradient-to-r from-blue-500 via-green-500 to-yellow-500 rounded-lg blur-sm opacity-75 group-hover:opacity-90 group-hover:blur-md"></span>
           <span className="absolute inset-0 w-full h-full transition duration-300 ease-in-out transform bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 rounded-lg group-hover:translate-x-1 group-hover:translate-y-1"></span>
           <span className="relative z-10">Login</span>
         </button>
         </Link>
         <Link to="/signup">
-        <button className="relative inline-block px-6 py-3 font-bold text-white group relative inline-block px-6 py-3 font-bold text-white group border border-black rounded-lg">
+        <button className="relative inline-block px-6 py-3 font-bold text-white group group border border-black rounded-lg">
           <span className="absolute inset-0 w-full h-full transition duration-300 ease-in-out transform bg-gradient-to-r from-blue-600 via-green-600 to-yellow-600 rounded-lg group-hover:translate-x-1 group-hover:translate-y-1"></span>
           <span className="absolute inset-0 w-full h-full transition duration-300 ease-in-out transform bg-gradient-to-r from-blue-500 via-green-500 to-yellow-500 rounded-lg blur-sm opacity-75 group-hover:opacity-90 group-hover:blur-md"></span>
           <span className="relative z-10">Sign Up</span>

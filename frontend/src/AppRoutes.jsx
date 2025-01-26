@@ -147,6 +147,7 @@ function AppRoutes() {
         />
         {/* EntryGate, OnlineStudents, Wallet, Help, etc. भी इसी तरह */}
       </Route>
+      
 
       {/* 404 Not Found fallback */}
       <Route path="*" element={<h2>404 Not Found</h2>} />
