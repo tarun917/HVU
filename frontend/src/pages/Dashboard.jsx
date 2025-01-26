@@ -83,7 +83,7 @@ export default function Dashboard() {
 
   // Tailwind gradient + 3D-ish style
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 flex justify-center items-start py-10 px-4">
+    <div className="ml-[12.5%] min-h-screen bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 flex justify-center items-start py-10 px-4">
       <div
         className="w-full max-w-4xl rounded-xl shadow-2xl p-8 relative"
         style={{

@@ -1,8 +1,6 @@
-// src/pages/ActiveClasses.jsx
 import { useState } from "react";
 
 export default function ActiveClasses() {
-  // डेमो के लिए नकली क्लास टाइम-टेबल
   const initialClasses = [
     {
       id: 101,
@@ -12,7 +10,7 @@ export default function ActiveClasses() {
       endTime: "10:30 AM",
       hall: "Virtual Hall A",
       section: "B.Tech CSE - Section A",
-      status: "Live", // Live, Upcoming, or Completed
+      status: "Live",
     },
     {
       id: 102,
@@ -57,103 +55,103 @@ export default function ActiveClasses() {
   ];
 
   const [classes] = useState(initialClasses);
-
-  // Filter: सब / Live / Upcoming / Completed
   const [selectedFilter, setSelectedFilter] = useState("All");
   const filters = ["All", "Live", "Upcoming", "Completed"];
 
   const filteredClasses = classes.filter((cls) => {
-    return (
-      selectedFilter === "All" || cls.status === selectedFilter
-    );
+    return selectedFilter === "All" || cls.status === selectedFilter;
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-700 via-purple-900 to-black px-6 py-10 text-white">
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-extrabold text-center mb-6 tracking-tight neon-text">
-          Active & Upcoming Classes
-        </h1>
-        <p className="text-center mb-8 text-gray-300">
-          Real-time schedule of ongoing and future classes in our 3D Virtual University.
-        </p>
+    <div className="min-h-screen flex">
+      {/* Main Content */}
+      <div className="ml-[12.5%] flex-grow bg-gradient-to-r from-purple-700 via-purple-900 to-black px-6 py-6 text-white">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-4xl font-extrabold text-center mb-6 tracking-tight neon-text">
+            Active & Upcoming Classes
+          </h1>
+          <p className="text-center mb-8 text-gray-300">
+            Real-time schedule of ongoing and future classes in our 3D Virtual
+            University.
+          </p>
 
-        {/* Filter Buttons */}
-        <div className="flex items-center justify-center space-x-4 mb-8">
-          {filters.map((f) => (
-            <button
-              key={f}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition ${
-                selectedFilter === f
-                  ? "bg-purple-500 text-white"
-                  : "bg-gray-700 hover:bg-gray-600"
-              }`}
-              onClick={() => setSelectedFilter(f)}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
+          {/* Filter Buttons */}
+          <div className="flex items-center justify-center space-x-4 mb-8">
+            {filters.map((f) => (
+              <button
+                key={f}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                  selectedFilter === f
+                    ? "bg-purple-500 text-white"
+                    : "bg-gray-700 hover:bg-gray-600"
+                }`}
+                onClick={() => setSelectedFilter(f)}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
 
-        {/* Classes Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {filteredClasses.map((cls) => (
-            <div
-              key={cls.id}
-              className="relative bg-gradient-to-tr from-gray-800 to-gray-700 p-6 rounded-lg shadow-lg 
+          {/* Classes Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {filteredClasses.map((cls) => (
+              <div
+                key={cls.id}
+                className="relative bg-gradient-to-tr from-gray-800 to-gray-700 p-6 rounded-lg shadow-lg 
                 transform transition hover:-translate-y-1 hover:scale-105 hover:rotate-1"
-            >
-              {/* Subtle 3D overlay */}
-              <div className="absolute inset-0 bg-black opacity-20 pointer-events-none rounded-lg"></div>
+              >
+                {/* Subtle 3D overlay */}
+                <div className="absolute inset-0 bg-black opacity-20 pointer-events-none rounded-lg"></div>
 
-              <h2 className="relative text-xl font-bold drop-shadow z-10">
-                {cls.subject}
-              </h2>
-              <p className="relative text-gray-300 text-sm z-10 mb-1">
-                Teacher: <span className="text-gray-100">{cls.teacher}</span>
-              </p>
-              <p className="relative text-gray-300 text-sm z-10 mb-1">
-                Time:{" "}
-                <span className="text-gray-100">
-                  {cls.startTime} - {cls.endTime}
-                </span>
-              </p>
-              <p className="relative text-gray-300 text-sm z-10 mb-1">
-                Hall/Room: <span className="text-gray-100">{cls.hall}</span>
-              </p>
-              <p className="relative text-gray-300 text-sm z-10 mb-1">
-                Section: <span className="text-gray-100">{cls.section}</span>
-              </p>
-              <p className="relative text-gray-200 text-sm font-semibold z-10 mt-2">
-                Status:{" "}
-                <span
-                  className={`px-2 py-1 rounded ${
-                    cls.status === "Live"
-                      ? "bg-green-600"
-                      : cls.status === "Upcoming"
-                      ? "bg-blue-600"
-                      : "bg-gray-500"
-                  }`}
-                >
-                  {cls.status}
-                </span>
-              </p>
-
-              {/* 3D Join Button */}
-              {cls.status === "Live" && (
-                <div className="relative z-10 mt-4">
-                  <button
-                    onClick={() =>
-                      alert(`Joining ${cls.subject} in ${cls.hall} (3D)!`)
-                    }
-                    className="px-4 py-2 bg-black/40 rounded text-sm hover:bg-black/60 transition"
+                <h2 className="relative text-xl font-bold drop-shadow z-10">
+                  {cls.subject}
+                </h2>
+                <p className="relative text-gray-300 text-sm z-10 mb-1">
+                  Teacher: <span className="text-gray-100">{cls.teacher}</span>
+                </p>
+                <p className="relative text-gray-300 text-sm z-10 mb-1">
+                  Time:{" "}
+                  <span className="text-gray-100">
+                    {cls.startTime} - {cls.endTime}
+                  </span>
+                </p>
+                <p className="relative text-gray-300 text-sm z-10 mb-1">
+                  Hall/Room: <span className="text-gray-100">{cls.hall}</span>
+                </p>
+                <p className="relative text-gray-300 text-sm z-10 mb-1">
+                  Section: <span className="text-gray-100">{cls.section}</span>
+                </p>
+                <p className="relative text-gray-200 text-sm font-semibold z-10 mt-2">
+                  Status:{" "}
+                  <span
+                    className={`px-2 py-1 rounded ${
+                      cls.status === "Live"
+                        ? "bg-green-600"
+                        : cls.status === "Upcoming"
+                        ? "bg-blue-600"
+                        : "bg-gray-500"
+                    }`}
                   >
-                    Join 3D Class Now
-                  </button>
-                </div>
-              )}
-            </div>
-          ))}
+                    {cls.status}
+                  </span>
+                </p>
+
+                {/* 3D Join Button */}
+                {cls.status === "Live" && (
+                  <div className="relative z-10 mt-4">
+                    <button
+                      onClick={() =>
+                        alert(`Joining ${cls.subject} in ${cls.hall} (3D)!`)
+                      }
+                      className="px-4 py-2 bg-black/40 rounded text-sm hover:bg-black/60 transition"
+                    >
+                      Join 3D Class Now
+                    </button>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -62,7 +62,7 @@ export default function Help() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-900 via-black to-gray-900 text-white px-6 py-10">
+    <div className="ml-[12.5%] min-h-screen bg-gradient-to-r from-purple-900 via-black to-gray-900 text-white px-6 py-10">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center mb-6 neon-text">
           Need Help?
