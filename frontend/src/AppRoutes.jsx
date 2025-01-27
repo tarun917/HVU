@@ -18,6 +18,8 @@ const EntryGate = lazy(() => import("./pages/EntryGate"));
 const OnlineStudents = lazy(() => import("./pages/OnlineStudents"));
 const Wallet = lazy(() => import("./pages/Wallet"));
 const Help = lazy(() => import("./pages/Help"));
+import ChatbotWidget from "./chatbot/components/ChatbotWidget";
+// या index.js से => import { ChatbotWidget } from "./chatbot";
 
 // etc.
 
@@ -25,6 +27,7 @@ function AppRoutes() {
   const { user } = useContext(AuthContext); // मान लें AuthContext में user स्टेट है
 
   return (
+    <>
     <Routes>
       {/* PUBLIC LAYOUT */}
       <Route element={<PublicLayout />}>
@@ -147,11 +150,16 @@ function AppRoutes() {
         />
         {/* EntryGate, OnlineStudents, Wallet, Help, etc. भी इसी तरह */}
       </Route>
+      {/* नीचे फ़्लोटिंग चैटबॉट */}
+     
       
 
       {/* 404 Not Found fallback */}
       <Route path="*" element={<h2>404 Not Found</h2>} />
+      
     </Routes>
+    <ChatbotWidget />
+    </>
   );
 }
 
