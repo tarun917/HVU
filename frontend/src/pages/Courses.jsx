@@ -90,11 +90,11 @@ export default function Courses() {
   });
 
   return (
-    <div className="ml-[12.5%] min-h-screen flex">
+    <div className="min-h-screen w-7/8 ml-36 mr-0 mt-0">
 
       {/* Main Content */}
-      <div className=" min-h-screen flex flex-grow bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white px-6 py-10">
-        <div className="max-w-6xl mx-auto">
+      <div className="min-h-screen w-7/8 mr-0 mt-0 bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white px-6 py-6">
+        <div className="max-w-4xl">
           <h1 className="text-4xl font-extrabold text-center mb-6 tracking-tight neon-text">
             Explore Our Futuristic Courses
           </h1>

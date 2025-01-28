@@ -72,7 +72,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen w-7/8 ml-36 mr-5 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 flex justify-center items-start py-10 px-6">
+    <div className="min-h-screen w-7/8 ml-36 mr-0 mt-0 bg-gradient-to-tr from-green-500 to-blue-500 flex justify-center items-start py-8 px-8">
       <div
         className="w-full max-w-6xl rounded-xl shadow-2xl p-8 relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg"
       >
@@ -101,7 +101,7 @@ export default function Dashboard() {
               <button
                 type="button"
                 onClick={handleChangeAvatarClick}
-                className="mt-4 px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-lg shadow transition font-semibold"
+                className="mt-4 px-6 py-3 bg-purple-500 hover:bg-green-600 text-white rounded-lg drop-shadow-xl transition font-semibold"
               >
                 Change Avatar
               </button>

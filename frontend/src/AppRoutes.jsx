@@ -17,6 +17,7 @@ const ActiveClasses = lazy(() => import("./pages/ActiveClasses"));
 const EntryGate = lazy(() => import("./pages/EntryGate"));
 const OnlineStudents = lazy(() => import("./pages/OnlineStudents"));
 const Wallet = lazy(() => import("./pages/Wallet"));
+const GameArena = lazy(() => import("./pages/GameArena"));
 const Help = lazy(() => import("./pages/Help"));
 import ChatbotWidget from "./chatbot/components/ChatbotWidget";
 // या index.js से => import { ChatbotWidget } from "./chatbot";
@@ -131,6 +132,11 @@ function AppRoutes() {
           path="/wallet"
           element={
             user ? <Wallet /> : <Navigate to="/login" />
+          }
+        />
+        <Route path="/game-arena"
+          element={
+            user ? <GameArena /> : <Navigate to="/login" />
           }
         />
 

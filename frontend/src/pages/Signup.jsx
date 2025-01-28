@@ -35,6 +35,7 @@ function Signup() {
     const success = await registerUser(username, email, password)
     if(success){
       navigate('/dashboard', { state: { newUser: true } })
+      alert('✨Welcome✨, Registration successfull✨')
     } else {
       alert('Registration failed! Email already registered.')
     }
@@ -89,7 +90,7 @@ function Signup() {
             <input
               type="text"
               placeholder="Username"
-              className="w-full pl-10 pr-4 py-3 bg-white/90 backdrop-blur-sm rounded-lg border border-cyan-500/80 focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all"
+              className="w-full pl-10 pr-4 py-3 bg-white/80 backdrop-blur-sm rounded-lg border border-cyan-500/80 focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
@@ -102,7 +103,7 @@ function Signup() {
             <input
               type="email"
               placeholder="Your-Email"
-              className="w-full pl-10 pr-4 py-3 bg-white/90 backdrop-blur-sm rounded-lg border border-cyan-500/80 focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all"
+              className="w-full pl-10 pr-4 py-3 bg-white/80 backdrop-blur-sm rounded-lg border border-cyan-500/80 focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -114,8 +115,8 @@ function Signup() {
             <LockClosedIcon className="h-5 w-5 absolute left-3 top-1/2 -translate-y-1/2 text-cyan-400 group-focus-within:text-purple-400 transition-colors" />
             <input
               type={showPassword ? "text" : "password"}
-              placeholder="Encryption Key"
-              className="w-full pl-10 pr-4 py-3 bg-white/90 backdrop-blur-sm rounded-lg border border-cyan-500/80 focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all"
+              placeholder="Your password"
+              className="w-full pl-10 pr-4 py-3 bg-white/80 backdrop-blur-sm rounded-lg border border-cyan-500/80 focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all"
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value)
@@ -149,7 +150,7 @@ function Signup() {
             type="submit"
             className="w-full py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-bold text-black hover:shadow-cyan-500/30 hover:shadow-xl transition-all relative overflow-hidden"
           >
-            <span className="relative z-10">SignUP Protocal</span>
+            <span className="relative z-10">SignUp Protocal</span>
             <div className="absolute inset-0 bg-white/10 backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity" />
           </motion.button>
 
@@ -163,22 +164,6 @@ function Signup() {
               Login your account
             </Link>
             </div>
-
-          {/* Additional Auth Options */}
-          <div className="text-center text-gray-400 text-sm">
-            — or authenticate with —
-          </div>
-          <div className="flex justify-center gap-4">
-            <button className="p-2 rounded-full bg-black/30 border border-cyan-500/30 hover:border-purple-500/50 transition-colors">
-              <img src="/neuro-github.svg" className="w-6 h-6" alt="GitHub" />
-            </button>
-            <button className="p-2 rounded-full bg-black/30 border border-cyan-500/30 hover:border-purple-500/50 transition-colors">
-              <img src="/neuro-google.svg" className="w-6 h-6" alt="Google" />
-            </button>
-            <button className="p-2 rounded-full bg-black/30 border border-cyan-500/30 hover:border-purple-500/50 transition-colors">
-              <img src="/neuro-wallet.svg" className="w-6 h-6" alt="Wallet" />
-            </button>
-          </div>
         </form>
       </motion.div>
     </div>

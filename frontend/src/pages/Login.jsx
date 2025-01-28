@@ -31,10 +31,11 @@ function Login() {
     e.preventDefault();
     const isSuccess = await login(username, password);
     if (!isSuccess) {
-      setError('Neuro-Authentication Failed! Invalid credentials');
+      setError('User-Authentication Failed! Invalid credentials');
     } else {
       setError('');
       navigate('/dashboard');
+      alert('✨Congrats✨, Login Successfull✨')
     }
   };
 
@@ -126,22 +127,6 @@ function Login() {
             >
               Create your account
             </Link>
-          </div>
-
-          {/* Additional Auth Options */}
-          <div className="text-center text-gray-400 text-sm">
-            — or authenticate with —
-          </div>
-          <div className="flex justify-center gap-4">
-            <button className="p-2 rounded-full bg-black/30 border border-cyan-500/30 hover:border-purple-500/50 transition-colors">
-              <img src="/neuro-github.svg" className="w-6 h-6" alt="GitHub" />
-            </button>
-            <button className="p-2 rounded-full bg-black/30 border border-cyan-500/30 hover:border-purple-500/50 transition-colors">
-              <img src="/neuro-google.svg" className="w-6 h-6" alt="Google" />
-            </button>
-            <button className="p-2 rounded-full bg-black/30 border border-cyan-500/30 hover:border-purple-500/50 transition-colors">
-              <img src="/neuro-wallet.svg" className="w-6 h-6" alt="Wallet" />
-            </button>
           </div>
         </form>
       </motion.div>
