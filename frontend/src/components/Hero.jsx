@@ -33,7 +33,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="hero-section relative flex flex-col items-center justify-center text-center bg-black text-white py-36 overflow-hidden">
+    <section className="hero-section relative flex flex-col items-center justify-center text-center bg-black text-white py-40 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
         <div className="bg-gradient-to-r from-gray-800 via-black to-gray-800 w-[200%] h-[200%] rounded-full blur-3xl opacity-10 animate-pulse"></div>

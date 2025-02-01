@@ -143,3 +143,14 @@
     0 0 10px rgba(255, 0, 255, 0.7),
     0 0 20px rgba(255, 0, 255, 0.6);
 }
+
+/* PDF Viewer Dark Theme Overrides */
+.pdf-viewer {
+  --rpv-core__inner-page-background-color: #1f2937 !important;
+  --rpv-core__toolbar-background-color: #111827 !important;
+  --rpv-core__toolbar-border-color: #374151 !important;
+}
+
+.pdf-viewer .rpv-default-layout__container {
+  border: 1px solid #374151 !important;
+}

@@ -56,12 +56,39 @@ function Sidebar() {
           </li>
           <li>
             <Link
+              to="/virtual-library"
+              className="block text-center py-1.5 px-3 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-white font-semibold rounded-md shadow-lg hover:shadow-2xl hover:shadow-cyan-500/40 transform hover:scale-105 transition-all duration-300 text-sm relative overflow-hidden group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-transparent to-indigo-500/30 animate-[shimmer_2s_infinite]"></div>
+              <span className="relative z-10 flex items-center justify-center gap-1">
+                Virtual Library
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/game-arena"
+              className="block text-center py-1.5 px-3 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-white font-semibold rounded-md shadow-lg hover:shadow-2xl hover:shadow-cyan-500/40 transform hover:scale-105 transition-all duration-300 text-sm relative group"
+            >
+              <span className="animate-pulse group-hover:animate-none absolute inset-0 w-full h-full opacity-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-md" />
+              <span className="relative z-10">
+                GameArena
+                <span className="absolute top-0 right-0 -mt-1 -mr-1 flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500" />
+                </span>
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/help"
               className="block text-center py-1.5 px-3 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white font-semibold rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all text-sm"
             >
               Help
             </Link>
           </li>
+
           <li>
             <Link
               to="/"
