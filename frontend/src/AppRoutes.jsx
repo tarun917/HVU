@@ -20,6 +20,7 @@ const Wallet = lazy(() => import("./pages/Wallet"));
 const GameArena = lazy(() => import("./pages/GameArena"));
 const Help = lazy(() => import("./pages/Help"));
 import ChatbotWidget from "./chatbot/components/ChatbotWidget";
+import VirtualLibrary from "./pages/VirtualLibrary";
 // या index.js से => import { ChatbotWidget } from "./chatbot";
 
 // etc.
@@ -132,6 +133,12 @@ function AppRoutes() {
           path="/wallet"
           element={
             user ? <Wallet /> : <Navigate to="/login" />
+          }
+        />
+         <Route
+          path="/virtual-library"
+          element={
+            user ? <VirtualLibrary /> : <Navigate to="/login" />
           }
         />
         <Route path="/game-arena"

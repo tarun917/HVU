@@ -56,6 +56,17 @@ function Sidebar() {
           </li>
           <li>
             <Link
+              to="/virtual-library"
+              className="block text-center py-1.5 px-3 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-white font-semibold rounded-md shadow-lg hover:shadow-2xl hover:shadow-cyan-500/40 transform hover:scale-105 transition-all duration-300 text-sm relative overflow-hidden group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-transparent to-indigo-500/30 animate-[shimmer_2s_infinite]"></div>
+              <span className="relative z-10 flex items-center justify-center gap-1">
+                Virtual Library
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/game-arena"
               className="block text-center py-1.5 px-3 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-white font-semibold rounded-md shadow-lg hover:shadow-2xl hover:shadow-cyan-500/40 transform hover:scale-105 transition-all duration-300 text-sm relative group"
             >
@@ -77,6 +88,7 @@ function Sidebar() {
               Help
             </Link>
           </li>
+
           <li>
             <Link
               to="/"
