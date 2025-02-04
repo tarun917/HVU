@@ -24,6 +24,10 @@ import VirtualLibrary from "./pages/VirtualLibrary";
 // या index.js से => import { ChatbotWidget } from "./chatbot";
 
 // etc.
+import MainScene from './ThreeJs/scenes/MainScene';
+import AvatarScene from './ThreeJs/scenes/AvatarScene';
+import GameModeScene from './ThreeJs/scenes/GameModeScene';
+import UniversityScene from './ThreeJs/scenes/UniversityScene';
 
 function AppRoutes() {
   const { user } = useContext(AuthContext); // मान लें AuthContext में user स्टेट है
@@ -161,6 +165,10 @@ function AppRoutes() {
             user ? <ActiveClasses /> : <Navigate to="/login" />
           }
         />
+        <Route path="/main" element={<MainScene />} />
+        <Route path="/avatar" element={<AvatarScene />} />
+        <Route path="/gamemode" element={<GameModeScene />} />
+        <Route path="/university" element={<UniversityScene />} />
         {/* EntryGate, OnlineStudents, Wallet, Help, etc. भी इसी तरह */}
       </Route>
       {/* नीचे फ़्लोटिंग चैटबॉट */}
